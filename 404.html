@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found | LK FITNESS</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; background: #080808; color: #fff; text-align: center; }
+    main { max-width: 520px; }
+    .mark { display: inline-block; margin-bottom: 22px; padding: 6px 12px; background: #e10600; font-weight: 900; letter-spacing: .08em; }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 8vw, 4rem); }
+    p { color: #bbb; line-height: 1.6; }
+    a { display: inline-block; margin-top: 12px; padding: 12px 20px; background: #e10600; color: #fff; text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="mark">LK FITNESS</span>
+    <h1>Page not found</h1>
+    <p>This page doesn't exist. Head back to the LK FITNESS website to explore the gym and contact us.</p>
+    <a id="home-link" href="./">Back to home</a>
+  </main>
+  <script>
+    // Resolve the site root for both user-site and project-site GitHub Pages URLs.
+    (function () {
+      var path = window.location.pathname;
+      var knownFiles = /\/(?:404\.html|index\.html)$/i;
+      if (knownFiles.test(path)) path = path.replace(knownFiles, '/');
+      var parts = path.split('/').filter(Boolean);
+      var root = '/' + (parts.length ? parts[0] + '/' : '');
+      document.getElementById('home-link').href = root;
+    }());
+  </script>
+</body>
+</html>
